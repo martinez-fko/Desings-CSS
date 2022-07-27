@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loadig</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="marker"></div>
+        <a href="#" >Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script type="text/javascript">
+        // var marker = document.querySelector('.marker')
+        // var item = document.querySelectorAll('nav a');
+
+        // function indicator(e){
+        //     marker.style.left = e.offsetLeft+"px";
+        //     marker.style.width = e.offsetWidth+"px";
+        // }
+
+        // item.forEach(link => {
+        //     link.addEventListener('click', (e) => {
+        //         indicator(e.target)
+        //     })
+        // })
+
+        var marker = document.querySelector('.marker')        
+        var links = document.querySelectorAll('nav a')
+        marker.style.left = links[0].offsetLeft+"px";
+        marker.style.width = links[0].offsetWidth+"px";
+
+        links.forEach(link => {
+        link.addEventListener( 'click', (e) => {
+            marker.style.left = link.offsetLeft+"px";
+             marker.style.width = link.offsetWidth+"px";
+        })
+    })
+
+    </script>
+</body>
+</html>
